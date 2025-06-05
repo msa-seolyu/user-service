@@ -1,6 +1,6 @@
-package com.seolyu.userservice.domain.account.api.controller;
+package com.seolyu.userservice.domain.account.controller;
 
-import com.seolyu.userservice.domain.account.api.dto.LoginPostReqDto;
+import com.seolyu.userservice.domain.account.dto.LoginPostReqDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

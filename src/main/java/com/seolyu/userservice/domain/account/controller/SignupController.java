@@ -1,9 +1,9 @@
-package com.seolyu.userservice.domain.account.api.controller;
+package com.seolyu.userservice.domain.account.controller;
 
-import com.seolyu.userservice.domain.account.api.dto.SignUpEmailDuplicationPostReqDto;
-import com.seolyu.userservice.domain.account.api.dto.SignUpEmailDuplicationPostResDto;
-import com.seolyu.userservice.domain.account.api.dto.SignupPostReqDto;
-import com.seolyu.userservice.domain.account.api.service.SignupService;
+import com.seolyu.userservice.domain.account.dto.SignUpEmailDuplicationPostReqDto;
+import com.seolyu.userservice.domain.account.dto.SignUpEmailDuplicationPostResDto;
+import com.seolyu.userservice.domain.account.dto.SignupPostReqDto;
+import com.seolyu.userservice.domain.account.service.SignupService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

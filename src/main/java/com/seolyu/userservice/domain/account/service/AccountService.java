@@ -1,9 +1,9 @@
-package com.seolyu.userservice.domain.account.api.service;
+package com.seolyu.userservice.domain.account.service;
 
 import com.seolyu.userservice.common.error.ErrorCode;
-import com.seolyu.userservice.common.error.exception.UserException;
-import com.seolyu.userservice.domain.account.domain.entity.Account;
-import com.seolyu.userservice.domain.account.domain.repository.AccountRepository;
+import com.seolyu.userservice.common.error.exception.SeolyuException;
+import com.seolyu.userservice.domain.account.entity.Account;
+import com.seolyu.userservice.domain.account.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +20,7 @@ public class AccountService {
      */
     public Account getAccount(Long id) {
         return accountRepository.findById(id)
-                .orElseThrow(() -> new UserException(ErrorCode.ACCOUNT_NOT_FOUND));
+                .orElseThrow(() -> new SeolyuException(ErrorCode.ACCOUNT_NOT_FOUND));
     }
 
     /**
@@ -48,7 +48,7 @@ public class AccountService {
     public void validateDuplicatedEmail(String email) {
         boolean isExists = this.isExistsByEmail(email);
         if(isExists) {
-            throw new UserException(ErrorCode.ACCOUNT_EMAIL_DUPLICATION);
+            throw new SeolyuException(ErrorCode.ACCOUNT_EMAIL_DUPLICATION);
         }
     }
 }

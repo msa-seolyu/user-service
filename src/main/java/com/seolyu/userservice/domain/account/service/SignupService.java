@@ -1,7 +1,7 @@
-package com.seolyu.userservice.domain.account.api.service;
+package com.seolyu.userservice.domain.account.service;
 
-import com.seolyu.userservice.domain.account.api.dto.SignupPostReqDto;
-import com.seolyu.userservice.domain.account.domain.entity.Account;
+import com.seolyu.userservice.domain.account.dto.SignupPostReqDto;
+import com.seolyu.userservice.domain.account.entity.Account;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

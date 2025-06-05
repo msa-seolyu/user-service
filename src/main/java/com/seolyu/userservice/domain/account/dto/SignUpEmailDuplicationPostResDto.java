@@ -1,4 +1,4 @@
-package com.seolyu.userservice.domain.account.api.dto;
+package com.seolyu.userservice.domain.account.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -5,15 +5,15 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 @Getter
-public class UserException extends RuntimeException {
+public class SeolyuException extends RuntimeException {
     private final ErrorCode errorCode;
 
-    public UserException(ErrorCode errorCode) {
+    public SeolyuException(ErrorCode errorCode) {
         super(errorCode.getMessage());
         this.errorCode = errorCode;
     }
 
-    public UserException(ErrorCode errorCode, String message) {
+    public SeolyuException(ErrorCode errorCode, String message) {
         super(message);
         this.errorCode = errorCode;
     }

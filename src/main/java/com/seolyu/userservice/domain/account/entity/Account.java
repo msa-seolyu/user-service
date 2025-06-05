@@ -1,4 +1,4 @@
-package com.seolyu.userservice.domain.account.domain.entity;
+package com.seolyu.userservice.domain.account.entity;
 
 import com.seolyu.userservice.common.model.BaseEntityDateAggregate;
 import jakarta.persistence.*;
@@ -15,12 +15,12 @@ public class Account extends BaseEntityDateAggregate {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name", nullable = false, length = 50)
+    @Column(nullable = false, length = 50)
     private String name;
 
-    @Column(name = "email", nullable = false, length = 50)
+    @Column(nullable = false, length = 50)
     private String email;
 
-    @Column(name = "password", nullable = false, length = 255)
+    @Column(nullable = false, length = 255)
     private String password;
 }

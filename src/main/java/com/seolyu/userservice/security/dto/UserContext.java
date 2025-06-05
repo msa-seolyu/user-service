@@ -1,6 +1,6 @@
 package com.seolyu.userservice.security.dto;
 
-import com.seolyu.userservice.domain.account.domain.entity.Account;
+import com.seolyu.userservice.domain.account.entity.Account;
 import lombok.Getter;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;

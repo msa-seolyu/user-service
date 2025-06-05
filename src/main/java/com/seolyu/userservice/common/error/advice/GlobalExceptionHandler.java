@@ -1,7 +1,7 @@
 package com.seolyu.userservice.common.error.advice;
 
 import com.seolyu.userservice.common.error.ErrorCode;
-import com.seolyu.userservice.common.error.exception.UserException;
+import com.seolyu.userservice.common.error.exception.SeolyuException;
 import com.seolyu.userservice.common.error.response.ErrorsResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.catalina.connector.ClientAbortException;
@@ -25,8 +25,8 @@ import java.io.IOException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(UserException.class)
-    public ResponseEntity<ErrorsResponse> handleUserException(UserException e) {
+    @ExceptionHandler(SeolyuException.class)
+    public ResponseEntity<ErrorsResponse> handleSeolyuException(SeolyuException e) {
         log.debug(e.toString(), e);
         return ResponseEntity.status(e.getStatus())
                 .body(ErrorsResponse.create(e.getStatus().value(), e.getCode(), e.getErrorMessage()));
